@@ -40,6 +40,6 @@ public class Boutique implements Serializable {
 	@JsonIgnore
 	private CentreCommercial centreCommercial;
 	@ManyToMany
-	@JsonIgnore
+
 	private Set<Client> clients;
 }
