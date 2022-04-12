@@ -21,9 +21,9 @@ public class BoutiqueServiceImpl implements IBoutiqueService {
 	@Override
 	public void ajouterEtaffecterListeboutique(List<Boutique> lb, Long idCentre) {
 		boutiqueRepository.saveAll(lb);
-		CentreCommercial centre = centreRepository.findById(idCentre).orElse(null);
+		CentreCommercial cente = centreRepository.findById(idCentre).orElse(null);
 		for (Boutique boutique : lb) {
-			boutique.setCentreCommercial(centre);
+			boutique.setCentreCommercial(cente);
 		}
 		boutiqueRepository.saveAll(lb);
 	}
